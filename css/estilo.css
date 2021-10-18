@@ -1,0 +1,52 @@
+/*Fundo do game*/
+body{
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: 100%;
+}
+/*configurações do mosquito*/
+
+.mosquito1{
+    width: 50px;
+    height: 50px;
+}
+.mosquito2{
+    width: 70px;
+    height: 70px;
+}
+.mosquito3{
+    width: 90px;
+    height: 90px;
+}
+.ladoA{
+    transform: scaleX(1);
+}
+.ladoB{
+    transform: scaleX(-1);
+}
+.mosca_morta{
+    width: 70px;
+    height: 70px;
+}
+/*Area tempo e vidas*/
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    left: 0px;
+    border-top: 1px solid #fff;
+    background-color: white;
+    opacity: 0.7;
+}
+.vidas{
+    float: left;
+}
+.tempo{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Edição do bootstrap*/
+.form-control{
+    appearance: auto;
+}

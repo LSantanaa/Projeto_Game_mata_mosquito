@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Mosquito</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        html{
+            cursor: url(img/mata_mosca.png) 30 30, auto;
+        }
+    </style>
+    <script src="js/jogo.js"></script>
+</head>
+<!--Chama função de ajustar tamanho de tela-->
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <!-- Area de vidas e tempo -->
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="img/coracao_cheio.png" alt="coracao vazio">
+            <img id="v2" src="img/coracao_cheio.png" alt="coracao cheio">
+            <img id="v3" src="img/coracao_cheio.png" alt="coracao cheio">
+        </div>
+        <div class="tempo">
+            Tempo Restante:<span id="cronometro"></span>
+        </div>
+    </div>
+    <!-- Chamando funções necessárias para funcionamento -->
+    <script>
+        // função cronometro
+        if(criaMosquitoTempo == 1000){
+        tempo = 50
+        }else if(criaMosquitoTempo == 750){
+        tempo = 25
+        }
+        
+        document.getElementById('cronometro').innerHTML = '&nbsp&nbsp' + tempo
+        // função de principal de posição do mosquito
+        var criaMosquito = setInterval(function(){
+            posicaoRandomica()
+        }, criaMosquitoTempo)
+
+    </script>
+
+</body>
+</html>
